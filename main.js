@@ -1,7 +1,7 @@
 var gameData = {  
     gold: 0,
-    goldPerClick: 1
-    goldPerClickCost: 10
+    goldPerClick: 1,
+    goldPerClickCost: 10,
   }
   
   function mineGold() {
