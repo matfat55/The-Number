@@ -9,6 +9,8 @@ const upgradeBtn = document.getElementById("upgrade-btn");
 const upgradeCostElement = document.getElementById("upgrade-cost");
 const upgradesBoughtElement = document.getElementById("times-bought")
 
+upgradeBtn.disabled = true
+
 function updateScore() {
   score += incrementValue;
   scoreElement.textContent = score;
