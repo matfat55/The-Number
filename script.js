@@ -43,6 +43,7 @@ function checkUpgradeAvailability() {
 
 setInterval(() => {
   updateScore();
+  score = Math.floor(score)
   checkUpgradeAvailability();
 }, 1000);
 
