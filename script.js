@@ -21,7 +21,7 @@ function upgrade() {
     score -= upgradeCost;
     incrementValue += 1
     upgradesBought += 1;
-    upgradeCost = 10*(1.15**upgradesBought); // using cookie clicker formula without F
+    upgradeCost = Math.round(10*(1.15**upgradesBought)); // using cookie clicker formula without F
     scoreElement.textContent = score;
     incrementValueElement.textContent = incrementValue;
     upgradeCostElement.textContent = upgradeCost;
@@ -36,7 +36,9 @@ function upgrade() {
 function checkUpgradeAvailability() {
   if (score >= upgradeCost) {
     upgradeBtn.disabled = false;
-  }
+  } else {
+    upgradeBtn.disabled = true;
+  } 
 }
 
 setInterval(() => {
