@@ -1,1 +1,1 @@
-idk im trying something new
+my freshman project. i hope it works
