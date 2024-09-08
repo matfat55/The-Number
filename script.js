@@ -48,3 +48,16 @@ setInterval(() => {
 }, 1000);
 
 upgradeBtn.addEventListener("click", upgrade);
+
+function showTab(tabName) {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(button => button.classList.remove('active'));
+  tabContents.forEach(content => content.style.display = 'none');
+
+  document.getElementById(`${tabName}-tab`).style.display = 'block';
+  document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`).classList.add('active');
+}
+
+showTab('number'); //show number by default

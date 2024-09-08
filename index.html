@@ -9,12 +9,23 @@
   <body>
     <div id="game-container">
       <h1>The Number</h1>
-      <p>Score: <span id="score">0</span></p>
-      <button id="upgrade-btn">
-        Upgrade (Cost: <span id="upgrade-cost">10</span>) <br> Bought <span id="times-bought">0</span> Times
-      </button>
-      <p>Your number is increasing by <span id="increment-value"> 1 </span> every second</p>
-    </div>
+      <div class="tabs">
+        <button class="tab-button active" onclick="showTab('number')">Number</button>
+        <button class="tab-button" onclick="showTab('upgrades')">Upgrades</button>
+      </div>
+      <div id="number-tab" class="tab-content">
+        <p>Score: <span id="score">0</span></p>
+      </div>
+      <div id="upgrades-tab" class="tab-content" style="display: none">
+        <button id="upgrade-btn">
+          Upgrade (Cost: <span id="upgrade-cost">10</span>) <br />
+          Bought <span id="times-bought">0</span> Times
+        </button>
+        <p>
+          Your number is increasing by <span id="increment-value"> 1 </span> every
+          second
+        </p>
+      </div>
     <script src="script.js"></script>
   </body>
 </html>
