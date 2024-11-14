@@ -27,6 +27,9 @@ const itemBtn1 = document.getElementById("item-btn-1");
 const itemCostElement1 = document.getElementById("item-cost-1");
 const itemsBoughtElement1 = document.getElementById("items-bought-1");
 
+const resetScoreBtn = document.getElementById("reset-score-btn");
+const doubleIncrementBtn = document.getElementById("double-increment-btn");
+
 upgradeBtn.disabled = true;
 upgradeBtn2.disabled = true;
 itemBtn1.disabled = true;
@@ -87,6 +90,17 @@ function buyItem1() {
   }
 }
 
+function resetScore() {
+  score = 0;
+  scoreElement.textContent = score;
+  checkUpgradeAvailability();
+}
+
+function doubleIncrement() {
+  incrementValue *= 2;
+  incrementValueElement.textContent = incrementValue;
+}
+
 function checkUpgradeAvailability() {
   if (score >= upgradeCost) {
     upgradeBtn.disabled = false;
@@ -116,6 +130,8 @@ setInterval(() => {
 upgradeBtn.addEventListener("click", upgrade);
 upgradeBtn2.addEventListener("click", upgrade2);
 itemBtn1.addEventListener("click", buyItem1);
+resetScoreBtn.addEventListener("click", resetScore);
+doubleIncrementBtn.addEventListener("click", doubleIncrement);
 
 function showTab(tabName) {
   const tabButtons = document.querySelectorAll('.tab-button');
